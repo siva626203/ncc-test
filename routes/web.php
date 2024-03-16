@@ -40,4 +40,5 @@ Route::get('/enrollment',[WebsiteController::class,'enroll']);
 Route::get('/eligibility',[WebsiteController::class,'eligi']);
 Route::get('/contact-us', [WebsiteController::class, 'contactUs']);
 Route::post('/contact-us', [WebsiteController::class, 'saveContactUs']);
+Route::post('/enrollment', [WebsiteController::class, 'saveForm']);
 

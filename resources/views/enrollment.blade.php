@@ -8,15 +8,16 @@ EnrollementForm
 <div class="row">
 <div class="col-md-6">
 <div class="container-fluid bg-light">
-  <form method="POST" action="/">
+  <form method="POST" enctype="multipart/form-data"  action="/enrollment">
+    @csrf
     <div class="form-group">
       <label for="name" class="mt-3 mb-3">Name :</label>
-      <input type="text" class="form-control" id="name" placeholder="Enter Name with Initial (Block letters)" required>
+      <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name with Initial (Block letters)" required>
     </div>
     <div class="form-group">
       <label for="nationality" class="mt-3 mb-3">Nationality : </label>
-      <select id="nationality" class="form-control" name="nation" required>
-  <option value="">-- select one --</option>
+      <select id="nationality" name="nationality" class="form-control"  required>
+  <option value="" name="nationality">-- select one --</option>
   <option value="afghan">Afghan</option>
   <option value="albanian">Albanian</option>
   <option value="algerian">Algerian</option>
@@ -27,7 +28,6 @@ EnrollementForm
   <option value="argentinean">Argentinean</option>
   <option value="armenian">Armenian</option>
   <option value="australian">Australian</option>
-  <option value="austrian"></option>
   <option value="azerbaijani">Azerbaijani</option>
   <option value="bahamian">Bahamian</option>
   <option value="bahraini">Bahraini</option>
@@ -214,38 +214,41 @@ EnrollementForm
 
 <div class="form-group">
   <label for="dob" class="mt-3 mb-3">Date of Birth :</label>
-  <input type="date" id="dob" class="form-control" name="birthday" required>
+  <input type="date" name="dob" id="dob" class="form-control" name="dob" required>
 </div>
 <div class="fomr-group">
   <label for="mobile" class="mt-3 mb-3">Mobile Number :</label>
-  <input type="text" class="form-control" name="country_code"  placeholder="Enter Mobile Number"  pattern="[1-9]{1}[0-9]{9}" required> 
+  <input type="text" class="form-control" name="mobile"  placeholder="Enter Mobile Number"  pattern="[1-9]{1}[0-9]{9}" required> 
 </div>
 <div class="fomr-group">
   <label for="email" class="mt-3 mb-3">Email ID :</label>
-  <input type="email" class="form-control" pattern="[^ @]*@[^ @]*" placeholder="Enter Email Id" required>
+  <input type="email" name="email" class="form-control" placeholder="Enter Email Id" required>
 </div>
 <div class="form-group">
       <label for="college" class="mt-3 mb-3"> College Name :</label>
-      <input type="text"  class="form-control" id="cname" placeholder="Enter College Name" required>
+      <input type="text" name="collegename"  class="form-control" id="cname" placeholder="Enter College Name" required>
     </div>
     <div class="form-group">
       <label for="nccunit" class="mt-3 mb-3"> NCC Unit :</label>
-      <input type="text"  class="form-control" id="nccunit" placeholder="Enter Unit Name" required>
+      <input type="text"  name="unitname" class="form-control" id="nccunit" placeholder="Enter Unit Name" required>
     </div>
-    <div class="form-group select-radio6">
+    
+<div class="form-group select-radio6">
     <label for="nccact" class="mt-3 mb-3"> Willing to be enrolled and undergo training under the NCC act,1948 : </label>
     <div class="radio  form-control">
-        <input id="nccact" type="radio" value="yes"> <label for="nccact" class="radio-label"> Yes </label>
-        <input id="nccact" type="radio" value="no"> <label for="nccact" class="radio-label" > No </label>
+        <input id="nccact" name="training" type="radio" value="yes"> <label for="nccact" class="radio-label"> Yes </label>
+        <input id="nccact" name="training" type="radio" value="no"> <label for="nccact" class="radio-label" > No </label>
     </div>
   </div>
-  <div class="fomr-group">
+  
+<div class="fomr-group">
   <label for="bnkacc" class="mt-3 mb-3">Bank Account Number :</label>
-  <input type="number" class="form-control" name="bankacc" placeholder="Enter bank account Number" maxlength="17" required> 
+  <input type="number" name="accno" class="form-control"  placeholder="Enter bank account Number" maxlength="17" required> 
   </div>
-  <div class="form-group">
+ 
+ <div class="form-group">
       <label for="bnkname" class="mt-3 mb-3">Bank Name :</label>
-      <input type="text" class="form-control" id="bname" placeholder="Enter Bank Name" required>
+      <input type="text" class="form-control" name="bankname" id="bname" placeholder="Enter Bank Name" required>
     </div>
     <div class="fomr-group">
   <label for="aadhar" class="mt-3 mb-3">Aadhar Id Number :</label>
@@ -253,7 +256,7 @@ EnrollementForm
   </div>
   <div class="form-group">
   <label for="avatar" class="mt-3 mb-3"> Upload applicant Profile Picture :</label>
-  <input type="file" id="avatar" name="avatar" class="form-control" accept="image/png, image/jpeg" />
+  <input type="file" id="avatar" name="profile" class="form-control" accept="image/png, image/jpeg" />
   </div>
 </div> 
 </div>
@@ -262,19 +265,19 @@ EnrollementForm
   <div class="container-fluid bg-light">
   <div class="form-group">
       <label for="fathername" class="mt-3 mb-3"> Father Name :</label>
-      <input type="text"  class="form-control" id="fname" placeholder="Enter your Father Name" required>
+      <input type="text" name="fathername" class="form-control" id="fname" placeholder="Enter your Father Name" required>
     </div>
     <div class="form-group">
       <label for="mothername" class="mt-3 mb-3">Mother Name :</label>
-      <input type="text" class="form-control" id="mname" placeholder="Enter your Mother Name" required>
+      <input type="text" name="mothername" class="form-control" id="mname" placeholder="Enter your Mother Name" required>
     </div>
     <div class="form-group">
       <label for="address" class="mt-3 mb-3">Address :</label>
-      <input type="text" class="form-control" id="address" placeholder="Enter your Address" required>
+      <input type="text" name="address" class="form-control" id="address" placeholder="Enter your Address" required>
     </div>
     <div class="form-group">
       <label for="bloodgrp" class="mt-3 mb-3"> Blood Group :</label>
-      <select name="bloodgroup" class="form-control" required>
+      <select name="blood" class="form-control" required>
       <option value="">-- select one --</option>
       <option value="A+">A+</option> <option value="A-">A-</option>
       <option value="B+">B+</option> <option value="B-">B-</option>
@@ -284,24 +287,24 @@ EnrollementForm
     </div>
     <div class="form-group select-radio6">
     <label for="gender" class="mt-3 mb-3"> Sex :</label>
-    <div class="radio  form-control">
-        <input id="male" name="gender" type="radio" value="male"> <label for="male" class="radio-label"> Male </label>
-        <input id="female" name="gender" type="radio" value="female"> <label for="female" class="radio-label" > Female </label>
+    <div class="radio form-control">
+        <input id="male" name="sex" type="radio" value="male"> <label for="male" class="radio-label"> Male </label>
+        <input id="female" name="sex" type="radio" value="female"> <label for="female" class="radio-label" > Female </label>
     </div>
   </div>
   <div class="form-group">
       <label for="education" class="mt-3 mb-3"> Eduactional Qualification :</label>
-      <input type="text"  class="form-control" id="education" placeholder="Enter Educational Qualification" required>
+      <input type="text" name="education" class="form-control" id="education" placeholder="Enter Educational Qualification" required>
     </div>
     <div class="form-group">
       <label for="identification" class="mt-3 mb-3">Identification Mark :</label>
-      <input type="text" class="form-control" id="identification" placeholder="Enter Identification Mark" required>
+      <input type="text" class="form-control" name="indentification" placeholder="Enter Identification Mark" required>
     </div>
     <div class="form-group select-radio6">
     <label for="enrollbefore" class="mt-3 mb-3"> Have you enrolled in NCC earlier : </label>
     <div class="radio  form-control">
-        <input id="enrollbefore" type="radio" value="yes"> <label for="enrollbefore" class="radio-label"> Yes </label>
-        <input id="enrollbefore" type="radio" value="no"> <label for="enrollbefore" class="radio-label" > No </label>
+        <input id="enrollbefore" name="beforeentroll" type="radio" value="yes"> <label for="enrollbefore" class="radio-label"> Yes </label>
+        <input id="enrollbefore" name="beforeentroll" type="radio" value="no"> <label for="enrollbefore" class="radio-label" > No </label>
     </div>
       </div>
     
@@ -311,7 +314,7 @@ EnrollementForm
     </div>
     <div class="form-group">
       <label for="brnchname" class="mt-3 mb-3">Bank Branch :</label>
-      <input type="text" class="form-control" id="bnkbrnch" placeholder="Enter Bank Branch" required>
+      <input type="text" class="form-control" name="branch" id="bnkbrnch" placeholder="Enter Bank Branch" required>
     </div>
     <div class="fomr-group">
   <label for="panid" class="mt-3 mb-3">PAN ID Number :</label>
@@ -319,7 +322,7 @@ EnrollementForm
   </div>
   <div class="form-group">
   <label for="avatar" class="mt-3 mb-3"> Upload applicant signature :</label>
-  <input type="file" id="avatar" name="avatar" class="form-control" accept="image/png, image/jpeg" />
+  <input type="file" id="avatar" name="signature" class="form-control" accept="image/png, image/jpeg" />
   </div>
 </div>
 </div>
@@ -328,4 +331,14 @@ EnrollementForm
   <input class="btn btn-primary" type="submit" value="Submit">  
   </div>
 </form>
+<?php
+
+ try{
+    if(DB::connection()->getPdo()){
+        echo ".";
+    }
+ }catch(Exception $e){
+    echo "Error".$e;
+ }
+?>
 @stop

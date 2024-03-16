@@ -99,6 +99,41 @@ class WebsiteController extends Controller
 		return Redirect::to('/contact-us')->with('message', 'We received your message, our team will revert you shortly.');
 		//return "Saved Successfully";
 	}
+	function saveForm(Request $request) {
+		$file1=$request->file('profile');
+		$file2=$request->file('signature');
+		$profileName=$file1->getClientOriginalName();
+		$signName=$file2->getClientOriginalName();
+		$file1->move(public_path('profiles'),$profileName);
+		$file2->move(public_path('signatures'), $signName);
+		$profilePath='profiles/'.$profileName;
+		$signPath='signatures/'.$signName;
+		$name= $request -> input('name');
+		$nationality= $request -> input('nationality');
+		$dob= $request -> input('dob');
+		$mobile= $request -> input('mobile');
+		$email= $request -> input('email');
+		$collegename= $request -> input('collegename');
+		$unitname= $request -> input('unitname');
+		$training= $request -> input('training');
+		$fathername= $request -> input('fathername');
+		$mothername= $request -> input('mothername');
+		$address= $request -> input('address');
+		$blood= $request -> input('blood');
+		$sex= $request -> input('sex');
+		$education= $request -> input('education');
+		$indentification= $request -> input('indentification');
+		$beforeentroll= $request -> input('beforeentroll');
+		$accno= $request -> input('accno');
+		$bankname= $request -> input('bankname');
+		$ifsc= $request -> input('ifsc');
+		$branch=$request -> input('branch');
+		$aadhar=$request -> input('aadhar');
+		$panid=$request -> input('panid');
+		DB::insert("insert into entrollment(name,nationality,dob,mobile,email,collegename,unitname,training,fathername,mothername,address,blood,sex,education,indentification,beforeentroll,accno,bankname,ifsc,branch,aadhar,panid,profile,signature) value(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",[$name,$nationality,$dob,$mobile,$email,$collegename,$unitname,$training,$fathername,$mothername,$address,$blood,$sex,$education,$indentification,$beforeentroll,$accno,$bankname,$ifsc,$branch,$aadhar,$panid,$profilePath,$signPath]);
+		return Redirect::to('/contact-us')->with('message', 'We received your message, our team will revert you shortly.');
+		//return "Saved Successfully";
+	}
 }
 
 
