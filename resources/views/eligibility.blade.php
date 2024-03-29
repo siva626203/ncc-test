@@ -6,8 +6,11 @@ B certificate
 @section('content')
 
 <div class="container-fluid"> 
-"A’ CERTIFICATE
+<div class="container col-md-12 pt-5 pb-5 text-center">
 
+
+<h1 class="mb-2 mt-2">"A" CERTIFICATE</h1>
+<h5 class="lh-lg intent_text text-justify"> 
 The Cadet must have attended a minimum of 75% of total training periods laid down in the syllabus for the first and second years of Junior Division/Wing NCC (All Wings).
 In order to count his previous tenure, the break in the NCC Training Tenure of the cadet prior to his appearing in the exam should not exceed more than 12 months at one time.
 In case the break exceeds 12 months the following procedure will be followed :-
@@ -17,8 +20,10 @@ appear for Certificate A examination.
 In all other cases, where above conditions are not fulfilled, the cadet must attend a minimum of 75%
 periods of the first and second years of training.
 Must have attended one Annual Training Camp.
-‘B’ CERTIFICATE
+</h5>
 
+<h1 class="mb-2 mt-5">"B" CERTIFICATE</h1>
+<h5 class="lh-lg text-justify intent_text">
 The cadet must have attended a minimum of 75% of total training periods laid down in the syllabus for the first and second years for Senior Division/Wing NCC (All Wings).
 Break in the NCC Training Tenure of the cadet SD/ SW prior to appearing in the exam should not exceed more than 18 months at one time after his discharge to count his tenure for Certificate B Examination.
 In case the break exceeds 18 months the following procedure will be adopted :-
@@ -29,8 +34,10 @@ In all other cases where above conditions are not fulfilled the cadet must atten
 of the first & second years of training.
 Must have attended one Annual Training Camp /NIC /COC / RDC / Attachment with Regular Army/Navy/Air Force.
 Cadets possessing Certificate A will be awarded 10 bonus marks.
-‘C’ CERTIFICATE
+</h5>
 
+<h1 class="mb-2 mt-5">"C" CERTIFICATE</h1>
+<h5 class="lh-lg text-justify intent_text">
 The cadet must be in possession of Certificate B.
 The cadet must be in third year of Senior Division/Senior Wing NCC Training.
 The cadet must have attended a minimum of 75% of the periods of 3rdyear syllabus during the academic session.
@@ -66,6 +73,8 @@ Youth Exchange Programme.
 Foreign cruise (Navy or Coast Guard).
 Cadets will be allowed to appear for Certificate C examination only after one year of passing Certificate B examination.
 Air Wing Cadets should have flown minimum four Sorties in Micro light air craft. 
+</h5>
+
 </div>
-   	
+</div>
 @stop

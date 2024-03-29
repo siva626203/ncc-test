@@ -6,6 +6,7 @@
 
 <!--Link CSS External file-->
 <link rel="stylesheet" href="{{asset('CSS/style.css')}}">
+
 <!--Link JS External file-->
 <script type="text/javascript" src="{{asset('css/javascript-file.js')}}"></script>
 
@@ -17,18 +18,17 @@
 <link rel="stylesheet" type="text/css" href="{{asset('engine1/style.css')}}" />
 <script type="text/javascript" src="{{asset('engine1/jquery.js')}}"></script>
     
-<!--for link Font_Awesome-->
+<!--for link Font_Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      
+   
 </head>
-	
 
 <body>
 <div class="container-fluid bg-white">
   <div class="container text-center p-3">
-	  <img src="{{asset('images/skclogo.png')}}" class="rounded-circle float-start" alt="SKC Logo" width="140" height="120">
-  	<img src="{{asset('images/NCClogo.png')}}" class="float-end" alt="NCC Logo"  width="100" height="135">
+	  <img src="{{asset('images/skclogo.png')}}" class="rounded-circle float-start" alt="SKC Logo" width="130" height="120">
+  	<img src="{{asset('images/NCClogo.png')}}" class="float-end" alt="NCC Logo"  width="105" height="125">
     <h1>Sri Kaliswari College(Autonomous), Sivakasi</h1>
   	<h5>Affiliated with Madurai Kamaraj University</h5>
   	<h6>Re-Accredited with "A" grade (3rd Cycle) by NAAC with CGPA 3.11</h6> 
@@ -38,7 +38,8 @@
 
   <div class="container-fluid bg-warning">
   <div><nav class="navbar navbar-expand-sm">
-  <!--Home -->
+  
+  <!-- Home -->
   <div class="dropdown">
     <a href="/">
     <button type="button" class="btn btn-primary">
@@ -62,7 +63,7 @@
     </ul>
   </div>
 
-  <!-- Enrollment-->
+  <!-- Enrollment -->
   <div class="dropdown">
     <button type="button" class="btn btn- dropdown-toggle" data-bs-toggle="dropdown">
     <i class="fa-solid fa-list-check"></i>  Enrollment
@@ -81,7 +82,7 @@
    </ul>  
   </div>
 
-  <!--Downloads -->
+  <!-- Downloads -->
   <div class="dropdown">
     <button type="button" class="btn btn- dropdown-toggle" data-bs-toggle="dropdown">
     <i class="fa-solid fa-download"></i> Downloads
@@ -103,9 +104,8 @@
     <i class="fa-solid fa-graduation-cap"></i>  Certificates Exams
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#"> "B" Certificate </a></li>
-      <li><a class="dropdown-item" href="#"> "C" Certificate </a></li>
-      <li><a class="dropdown-item" href="#">Model Question Paper</a></li>
+      <li><a class="dropdown-item" href="https://drive.google.com/file/d/1zzrFusLqqO8r8SZ-KJPW0yrHt9MktR6s/view?pli=1" target="_blank"> "B & C" Exam </a></li>
+      <li><a class="dropdown-item" href="https://cbseacademic.nic.in/web_material/SQP/ClassX_2023_24/NCC-SQP.pdf" target="_blank">Model Question Paper</a></li>
       <li><a class="dropdown-item" href="/eligibility">Eligibility</a></li>
       <li>
       <a class="dropdown-item" href="#">
@@ -113,7 +113,7 @@
       </a>
       <ul class="dropdown-menu dropdown-submenu">
         <li>
-          <a class="dropdown-item" href="#">2023</a>
+          <a class="dropdown-item" href="https://www.tejasnccarmy.com/ncc-b-certificate-model-paper-with-question-and-answer-in-english-2/" target="_blank">2023</a>
         </li>
     </ul>
       </li>
@@ -139,13 +139,13 @@
           <a class="dropdown-item" href="/camp-tsc">TSC</a>
         </li>
         <li>
-          <a class="dropdown-item" href="#">LC &raquo; </a>
+          <a class="dropdown-item">LC &raquo; </a>
           <ul class="dropdown-menu dropdown-submenu">
             <li>
               <a class="dropdown-item" href="/camp-blc">BLC</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">ALC</a>
+              <a class="dropdown-item" href="/camp-alc">ALC</a>
             </li>
           </ul>
         </li>
@@ -156,13 +156,13 @@
           <a class="dropdown-item" href="/camp-nic">NIC</a>
         </li>
         <li>
-          <a class="dropdown-item" href="#">YEP</a>
+          <a class="dropdown-item" href="/camp-yep">YEP</a>
         </li>
         <li>
-          <a class="dropdown-item" href="#">NSC</a>
+          <a class="dropdown-item" href="/camp-nsc">NSC</a>
         </li>
         <li>
-          <a class="dropdown-item" href="#">VSC</a>
+          <a class="dropdown-item" href="/camp-vsc">VSC</a>
         </li>
       </ul>
     </li>
@@ -174,36 +174,24 @@
       </a>
       <ul class="dropdown-menu dropdown-submenu">
         <li>
-          <a class="dropdown-item" href="camp-atc">ATC/CATC</a>
+          <a class="dropdown-item" href="/camp-atc">ATC/CATC</a>
         </li>
         <li>
-          <a class="dropdown-item" href="#">IUC &raquo; </a>
-          <ul class="dropdown-menu dropdown-submenu">
-            <li>
-              <a class="dropdown-item" href="/camp-blc">RDC</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">TSC</a>
-            </li>
-          </ul>
+          <a class="dropdown-item" href="/camp-iuc">IUC</a>
         </li>
         <li>
-          <a class="dropdown-item" href="#">IGC &raquo; </a>
-          <ul class="dropdown-menu dropdown-submenu">
-            <li>
-              <a class="dropdown-item" href="/camp-blc">RDC</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">TSC</a>
-            </li>
-          </ul>
+          <a class="dropdown-item" href="/camp-igc">IGC</a>
         </li>
-      </ul>
-    </li>
   </ul>
+  
+  <!-- nested 3 -->  
+  <li>
+      <a class="dropdown-item" href="/camp-adven">
+      Adventurous Camps 
+      </a>
+  </li>
   </div>
 
-  
 <!-- Events -->
 <div class="dropdown">
   <a href="/events">
@@ -215,9 +203,40 @@
   <!--Achivements-->
   <div class="dropdown">
   <a href="/achiements">
-    <button type="button" class="btn">
+    <button type="button" class="btn btn- dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="fa-solid fa-trophy"></i> Achivements
     </button></a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton"> 
+      <li>
+      <a class="dropdown-item" href="#">
+        Pen-Picture Report &raquo;
+      </a>
+      <ul class="dropdown-menu dropdown-submenu">
+        <li>
+          <a  class="dropdown-item" href="/penpic22"> 2022 </a>
+        </li>
+        <li>
+          <a  class="dropdown-item" href="/penpic23"> 2023 </a>
+        </li>
+    </ul> 
+      <li>
+      <a class="dropdown-item" href="#">
+        Camps Attended &raquo;
+      </a>
+      <ul class="dropdown-menu dropdown-submenu">
+        <li>
+          <a  class="dropdown-item" href="/"> AAC (Chennai) </a>
+        </li>
+        <li>
+          <a  class="dropdown-item" href="/"> TSC (Idaiyapatti) </a>
+        </li>
+        <li>
+          <a  class="dropdown-item" href="/"> EBSB (Udaipur) </a>
+        </li>
+        <li>
+          <a  class="dropdown-item" href="/"> AAC (Secunderabad) </a>
+        </li>
+    </ul>
   </div>
 
   <!-- SKC-NCC-->
@@ -226,7 +245,7 @@
     <i class="fa-solid fa-house-flag"></i> SKC NCC
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <li><a class="dropdown-item" href="/enrollment"> SKC Enrollement</a></li>  
+    <li><a class="dropdown-item" href="/enrollment"> SKC Enrollment</a></li>  
       <li>
       <a class="dropdown-item" href="#">
         B-Certificates &raquo;
@@ -255,6 +274,13 @@
     <button type="button" class="btn">
     <i class="fa-regular fa-id-badge"></i>  Contact Us
     </button></a>
+  </div>
+
+  <!-- Admin Login -->
+  <div class="dropdown">
+    <a href="/adminlog">
+    <button type="button" class="btn"> Admin </button>
+    </a>
   </div>
 
 </nav>
@@ -292,7 +318,7 @@
     
     
 <!--copyrights-->	
-    <div class="bg-warning m-0 p-2">
+    <div class="container-fluid bg-warning m-0 p-2">
           <p class="text-light  m-0 ">Copyrights <i class="fa-regular fa-copyright"></i> All Rights Reserved</p>
     </div>    
 </body>

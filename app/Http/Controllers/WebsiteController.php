@@ -57,14 +57,40 @@ class WebsiteController extends Controller
 	function campIuc (Request $request){
 		return view('camp-iuc');
 	}
+	//dropdown-camp-igc
+	function campIgc (Request $request){
+		return view('camp-igc');
+	}
 	//dropdown-camp-blc
 	function campBlc(){
 		return view('camp-blc');
+	}
+	//dropdown-camp-alc
+	function campAlc(){
+		return view('camp-alc');
+	}
+	//dropdown-camp-YEP
+	function campYEP(){
+		return view('camp-yep');
 	}
 	//dropdown-camp-NIC
 	function campNIC(){
 		return view('camp-nic');
 	}
+	//dropdown-camp-VSC
+	function campVSC(){
+		return view('camp-vsc');
+	}
+	//dropdown-camp-NSC
+	function campNSC(){
+		return view('camp-nsc');
+	}
+	//dropdown-camp-Adventure
+	function campAd(){
+		return view('camp-adven');
+	}
+
+
 	//dropdown certificates
 	function bcert(){
 		return view('bcertipdf');
@@ -84,6 +110,22 @@ class WebsiteController extends Controller
 	//eligibilitycreteria
 	function eligi(){
 		return view('eligibility');
+	}
+	//penpicReport22
+	function penpicrep22(){
+		return view('penpic22');
+	}
+	//penpicReport23
+	function penpicrep23(){
+		return view('penpic23');
+	}
+	//AdminLogin
+	function adlogin(){
+		return view('adminlog');
+	}
+	//Dashboard
+	function dash_board(){
+		return view('dashboard');
 	}
 	//Contact-Us
 	function contactUs(Request $request) {

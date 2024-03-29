@@ -1,6 +1,6 @@
 @extends ('includes.common_template')
 @section ('title')
-TSCamp
+TSC Camp
 @stop
 
 @section('content')

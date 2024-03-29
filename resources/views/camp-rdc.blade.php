@@ -1,6 +1,6 @@
 @extends ('includes.common_template')
 @section ('title')
-RDCamp
+RDC Camp
 @stop
 
 @section('content')
