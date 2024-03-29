@@ -121,17 +121,46 @@ class WebsiteController extends Controller
 	}
 	//AdminLogin
 	function adlogin(){
+		session_start();
+		if(isset($_SESSION['admin'])){
+		return Redirect::to('/dashboard');
+		}
 		return view('adminlog');
 	}
 	//Dashboard
 	function dash_board(){
+		session_start();
+		if(isset($_SESSION['admin'])){
 		return view('dashboard');
+		}else{
+		return Redirect::to('/adminlog')->with('message', 'Please Login');
+		}
 	}
 	//Contact-Us
 	function contactUs(Request $request) {
 		return view('contact-us');
 	}
-	
+	function userDelete(string $id){
+		DB::delete("delete from entrollment where id=?", [$id]);
+		return Redirect::to('/dashboard')->with('message', 'Deleted Successfully');
+	}
+	function adminlogin(Request $request){
+		$email = $request -> input('email');
+		$password = $request -> input('password');
+		if($email == "admin@gmail.com" && $password == "admin"){
+			session_start();
+			$_SESSION['admin']="logged";
+			return Redirect::to('/dashboard');
+		}else{
+			return Redirect::to('/adminlog')->with('message', 'Invalid Credentials');
+		}
+	}
+	function logout(){
+		session_start();
+		session()->pull('admin');
+		session_destroy();
+		return Redirect::to('/adminlog')->with('message', 'Logged Out');
+	}
 	function saveContactUs(Request $request) {
 		$name = $request -> input('name');
 		$mobile = $request -> input('mobile');

@@ -47,8 +47,10 @@ Route::get('/eligibility',[WebsiteController::class,'eligi']);
 Route::get('/penpic22', [WebsiteController::class, 'penpicrep22']);
 Route::get('/penpic23', [WebsiteController::class, 'penpicrep23']);
 Route::get('/adminlog', [WebsiteController::class, 'adlogin']);
+Route::post('/adminlog', [WebsiteController::class, 'adminlogin']);
 Route::get('/dashboard', [WebsiteController::class, 'dash_board']);
+Route::post('/dashboard', [WebsiteController::class, 'logout']);
 Route::get('/contact-us', [WebsiteController::class, 'contactUs']);
 Route::post('/contact-us', [WebsiteController::class, 'saveContactUs']);
 Route::post('/enrollment', [WebsiteController::class, 'saveForm']);
-
+Route::get('/delete/{id}',[WebsiteController::class, 'userDelete']);

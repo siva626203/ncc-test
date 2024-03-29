@@ -66,23 +66,26 @@ Admin Login
     </div>
   </nav>
   <!-- Navbar -->
-
   <!-- Background image -->
   <div id="intro" class="bg-image shadow-2-strong">
+     @if(Session::has('message'))
+    <p class="alert alert-danger">{{ Session::get('message') }}</p>
+    @endif
     <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-5 col-md-8">
-            <form class="bg-white rounded shadow-5-strong p-5">
+            <form class="bg-white rounded shadow-5-strong p-5" action="/adminlog" method="POST">
+              @csrf
               <!-- Email input -->
               <div class="form-outline mb-4">
-                <input type="email" id="form1Example1" class="form-control" />
+                <input type="email" name="email" id="form1Example1" class="form-control" required/>
                 <label class="form-label" for="form1Example1">Email address</label>
               </div>
 
               <!-- Password input -->
               <div class="form-outline mb-4">
-                <input type="password" id="form1Example2" class="form-control"/>
+                <input type="password" id="form1Example2" class="form-control" name="password" required/>
                 <label class="form-label" for="form1Example2">Password</label>
               </div>
 
@@ -106,7 +109,7 @@ Admin Login
 
               <!-- Submit button -->
               
-              <a href="/dashboard" class="btn btn-primary" role="button"> Login </a>
+              <button type="submit" class="btn btn-primary"> Login </button>
 
             </form>
           </div>
