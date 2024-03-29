@@ -10,21 +10,11 @@ ContactUs
                 <img  class="img-fluid" src="{{asset('images/rdcBanner.png')}}" alt="Contact-Banner Image"/>
                 </div>
                 
-                <div class="flash-message">
-
-</div>    
+                
 	<div class="row">
     	<div class="col-md-6"> 
         		<div class="m-2 p-2">
         		<h4 class=" text-primary m-2 pt-5">Address</h4> 
-                <!-- <address>
-                <img  class="img-fluid rounded" src="{{asset('images/nccsir.png')}}" alt="Contact-Banner Image"/>
-                Sri Kaliswari College (Autonomous),<br>
-            	Virudhunagar Main Road, Anaikuttam,<br>
-            	Sivakasi – 626 130,<br>
-            	Virudhunagar(Dist),<br>
-            	Tamilnadu.
-           		 </address> -->
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -42,10 +32,8 @@ ContactUs
     </div>
   </div>
 </div>
-            </div>
-
-            
-            <div class="m-2 p-2">
+</div>
+        <div class="m-2 p-2">
             	<h4 class="text-primary">Contact No</h4>
                 <address>
                 +91-9790424902 <br>
@@ -65,8 +53,8 @@ ContactUs
             </div>
         </div>
          
-    		<div class=" bg-light pt-5 col-md-6">
-            @if(Session::has('message'))
+    <div class=" bg-light pt-5 col-md-6">
+    @if(Session::has('message'))
     <p class="alert alert-success">{{ Session::get('message') }}</p>
     @endif
     

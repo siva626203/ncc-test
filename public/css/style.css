@@ -151,18 +151,59 @@ imge{
 	color: white;
 	transform: rotateY(180deg);
   }
-/*for pfds*/
-  body {
-	width: 100%;
-	height: 100vh;
-	overflow-x: hidden;
-	margin:0;
+
+  /*hover on navbar */
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+    pointer-events: none;
+}
+
+.dropdown {
+  color: #0352fc;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+}
+
+  .dropdown-menu {
+	background-color: #fff;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+	text-align: center;
+	visibility: hidden;
+	z-index: -99999;
+  }
+
+  .dropdown-menu li:first-child {
+	cursor: default;
   }
   
-  #adobe-dc-view {
+  .dropdown-menu a {
+	color: #000;
+	display: inline-block;
 	width: 100%;
-	height: 100%;
-	margin: 0 auto;
-	padding: 0;
+	text-decoration: none;
+	-webkit-transition: all 1s;
+	transition: all .2s;
+  }
+  
+  .dropdown-menu a:hover {
+	background: #f82408;
+	color: #fff;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+	background: rgb(226, 235, 255);
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: all .4s, background, 2s .3s linear;
+	transition: all .3s, background 2s .3s linear;
   }
   

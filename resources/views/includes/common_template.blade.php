@@ -41,7 +41,7 @@
   <!--Home -->
   <div class="dropdown">
     <a href="/">
-    <button type="button" class="btn btn-primary btn-sm">
+    <button type="button" class="btn btn-primary">
     <i class="fa-solid fa-house"></i> HOME
     </button></a>
   </div>
@@ -77,7 +77,7 @@
       
       <li><a class="dropdown-item" href="{{asset('https://nccauto.gov.in/uploads/settings/162814116813NCC%20OE%20-%2004%20-%20Forms%20by%20Cdts%20-%20Nomination%20to%20CWS.pdf')}}" target="_blank">Nomination of CWS</a></li>
    	
-   		<li><a class="dropdown-item bg-light" href="{{asset('https://nccauto.gov.in/enrolment')}}" target="_blank" alt="Acceptance Enrollement form"> For Direct Enroll</a></li>
+   		<li><a class="dropdown-item" href="{{asset('https://nccauto.gov.in/enrolment')}}" target="_blank" alt="Acceptance Enrollement form"> For Direct Enroll</a></li>
    </ul>  
   </div>
 
@@ -233,7 +233,7 @@
       </a>
       <ul class="dropdown-menu dropdown-submenu">
         <li>
-          <a id="adobe-dc-view" class="dropdown-item" href="/bcertipdf#toolbar=0"> 2022-2023 </a>
+          <a id="adobe-dc-view" class="dropdown-item" href="/bcertipdf"> 2022-2023 </a>
     </li>
     </ul>
       </li>
@@ -247,27 +247,6 @@
         </li>
       </ul>
       </li>
-  <!--
-  <script> 
-   var adobeDCView = new AdobeDC.View({
-    clientId: "YOUR_CLIENT_ID_HERE",
-    divId: "adobe-dc-view"
-});
-adobeDCView.previewFile(
-    {
-        content: { promise: Promise.resolve(blob.arrayBuffer()) },
-        metaData: { fileName: "bcertipdf.pdf" }
-    },
-    {
-        embedMode: "FULL_WINDOW",
-        defaultViewMode: "FIT_WIDTH",
-        showDownloadPDF: false,
-        showPrintPDF: false,
-        showLeftHandPanel: true,
-        showAnnotationTools: false
-    });
-    </script>
-  -->
   </div>
   
   <!-- Contact details-->

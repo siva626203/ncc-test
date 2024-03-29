@@ -4,11 +4,15 @@ EnrollementForm
 @stop
 
 @section('content')
-<h3 class="m-2 p-2 text-center"> Enrollement Form</h3>
+<div class="container-fluid">
+<h3 class="m-2 p-2 text-center"> Enrollment Form</h3>
+@if(Session::has('message'))
+    <p class="alert alert-success">{{ Session::get('message') }}</p>
+    @endif
+
 <div class="row">
-<div class="col-md-6">
-<div class="container-fluid bg-light">
-  <form method="POST" enctype="multipart/form-data"  action="/enrollment">
+<div class="container-fluid bg-light col-md-6">
+<form method="POST" enctype="multipart/form-data"  action="/enrollment">
     @csrf
     <div class="form-group">
       <label for="name" class="mt-3 mb-3">Name :</label>
@@ -216,10 +220,12 @@ EnrollementForm
   <label for="dob" class="mt-3 mb-3">Date of Birth :</label>
   <input type="date" name="dob" id="dob" class="form-control" name="dob" required>
 </div>
+
 <div class="fomr-group">
   <label for="mobile" class="mt-3 mb-3">Mobile Number :</label>
   <input type="text" class="form-control" name="mobile"  placeholder="Enter Mobile Number"  pattern="[1-9]{1}[0-9]{9}" required> 
 </div>
+
 <div class="fomr-group">
   <label for="email" class="mt-3 mb-3">Email ID :</label>
   <input type="email" name="email" class="form-control" placeholder="Enter Email Id" required>
@@ -236,7 +242,7 @@ EnrollementForm
 <div class="form-group select-radio6">
     <label for="nccact" class="mt-3 mb-3"> Willing to be enrolled and undergo training under the NCC act,1948 : </label>
     <div class="radio  form-control">
-        <input id="nccact" name="training" type="radio" value="yes"> <label for="nccact" class="radio-label"> Yes </label>
+        <input id="nccact" name="training" type="radio" value="yes"> <label for="nccact" class="radio-label" > Yes </label>
         <input id="nccact" name="training" type="radio" value="no"> <label for="nccact" class="radio-label" > No </label>
     </div>
   </div>
@@ -256,10 +262,10 @@ EnrollementForm
   </div>
   <div class="form-group">
   <label for="avatar" class="mt-3 mb-3"> Upload applicant Profile Picture :</label>
-  <input type="file" id="avatar" name="profile" class="form-control" accept="image/png, image/jpeg" />
+  <input type="file" id="avatar" name="profile" class="form-control" accept="image/png, image/jpeg" required/>
   </div>
 </div> 
-</div>
+
 
 <div class="col-md-6">
   <div class="container-fluid bg-light">
@@ -286,25 +292,26 @@ EnrollementForm
     </select>
     </div>
     <div class="form-group select-radio6">
-    <label for="gender" class="mt-3 mb-3"> Sex :</label>
+    <label for="gender" class="mt-3 mb-3"> Division :</label>
     <div class="radio form-control">
-        <input id="male" name="sex" type="radio" value="male"> <label for="male" class="radio-label"> Male </label>
-        <input id="female" name="sex" type="radio" value="female"> <label for="female" class="radio-label" > Female </label>
+        <input id="male" name="gender" type="radio" value="SD"> <label for="male" class="radio-label"> SD </label>
+        <input id="female" name="gender" type="radio" value="SW"> <label for="female" class="radio-label" > SW </label>
     </div>
   </div>
   <div class="form-group">
       <label for="education" class="mt-3 mb-3"> Eduactional Qualification :</label>
       <input type="text" name="education" class="form-control" id="education" placeholder="Enter Educational Qualification" required>
     </div>
+    
     <div class="form-group">
       <label for="identification" class="mt-3 mb-3">Identification Mark :</label>
-      <input type="text" class="form-control" name="indentification" placeholder="Enter Identification Mark" required>
+      <input type="text" class="form-control" name="identification" placeholder="Enter Identification Mark" required>
     </div>
     <div class="form-group select-radio6">
     <label for="enrollbefore" class="mt-3 mb-3"> Have you enrolled in NCC earlier : </label>
     <div class="radio  form-control">
-        <input id="enrollbefore" name="beforeentroll" type="radio" value="yes"> <label for="enrollbefore" class="radio-label"> Yes </label>
-        <input id="enrollbefore" name="beforeentroll" type="radio" value="no"> <label for="enrollbefore" class="radio-label" > No </label>
+        <input id="enrollbefore" name="beforeendroll" type="radio" value="yes"> <label for="enrollbefore" class="radio-label"> Yes </label>
+        <input id="enrollbefore" name="beforeendroll" type="radio" value="no"> <label for="enrollbefore" class="radio-label" > No </label>
     </div>
       </div>
     
@@ -322,7 +329,7 @@ EnrollementForm
   </div>
   <div class="form-group">
   <label for="avatar" class="mt-3 mb-3"> Upload applicant signature :</label>
-  <input type="file" id="avatar" name="signature" class="form-control" accept="image/png, image/jpeg" />
+  <input type="file" id="avatar" name="signature" class="form-control mb-3" accept="image/png, image/jpeg" required/>
   </div>
 </div>
 </div>
@@ -331,6 +338,7 @@ EnrollementForm
   <input class="btn btn-primary" type="submit" value="Submit">  
   </div>
 </form>
+</div>
 <?php
 
  try{

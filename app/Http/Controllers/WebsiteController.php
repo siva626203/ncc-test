@@ -96,7 +96,7 @@ class WebsiteController extends Controller
 		$email = $request -> input('email');
 		$message= $request -> input('message');
 		DB::insert("insert into feedback(name,mobile,email,message) value(?,?,?,?)",[$name,$mobile,$email,$message]);
-		return Redirect::to('/contact-us')->with('message', 'We received your message, our team will revert you shortly.');
+		return Redirect::to('/contact-us')->with('message', 'We received your message, we will revert you shortly.');
 		//return "Saved Successfully";
 	}
 	function saveForm(Request $request) {
@@ -120,18 +120,18 @@ class WebsiteController extends Controller
 		$mothername= $request -> input('mothername');
 		$address= $request -> input('address');
 		$blood= $request -> input('blood');
-		$sex= $request -> input('sex');
+		$sex= $request -> input('gender');
 		$education= $request -> input('education');
-		$indentification= $request -> input('indentification');
-		$beforeentroll= $request -> input('beforeentroll');
+		$indentification= $request -> input('identification');
+		$beforeentroll= $request -> input('beforeendroll');
 		$accno= $request -> input('accno');
 		$bankname= $request -> input('bankname');
 		$ifsc= $request -> input('ifsc');
 		$branch=$request -> input('branch');
 		$aadhar=$request -> input('aadhar');
 		$panid=$request -> input('panid');
-		DB::insert("insert into entrollment(name,nationality,dob,mobile,email,collegename,unitname,training,fathername,mothername,address,blood,sex,education,indentification,beforeentroll,accno,bankname,ifsc,branch,aadhar,panid,profile,signature) value(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",[$name,$nationality,$dob,$mobile,$email,$collegename,$unitname,$training,$fathername,$mothername,$address,$blood,$sex,$education,$indentification,$beforeentroll,$accno,$bankname,$ifsc,$branch,$aadhar,$panid,$profilePath,$signPath]);
-		return Redirect::to('/contact-us')->with('message', 'We received your message, our team will revert you shortly.');
+		DB::insert("insert into entrollment(name,nationality,dob,mobile,email,collegename,unitname,training,fathername,mothername,address,blood,gender,education,identification,beforeendroll,accno,bankname,ifsc,branch,aadhar,panid,profile,signature) value(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",[$name,$nationality,$dob,$mobile,$email,$collegename,$unitname,$training,$fathername,$mothername,$address,$blood,$sex,$education,$indentification,$beforeentroll,$accno,$bankname,$ifsc,$branch,$aadhar,$panid,$profilePath,$signPath]);
+		return Redirect::to('/enrollment')->with('message', 'Your Records will be submitted successfully!.');
 		//return "Saved Successfully";
 	}
 }

@@ -49,8 +49,9 @@ Welcome to NCC Webportal
       <img src="{{asset('images/aim.jpg')}}" class="img-rounded" id="img1" alt="#"></div>
       <div class="container col-md-8 text-center">
       <h1 class="pb-2">Aims </h1>
-      <h4 class="lh-lg">To develop qualities of character, courage, comradeship, discipline, leadership, secular outlook, spirit of adventure and sportsmanship and the ideals of selfless service among the youth to make them useful citizen. To create a human resource of organised, trained and motivated youth to provide leadership in all walks of life including the Armed Forces and be always available for the service of the nation.</h4></div>
-  	</div>
+      <h4 class="lh-lg intent_text">
+      The NCC aims at developing character, comradeship, discipline, a secular outlook, the spirit of adventure and ideals of selfless service amongst young citizens. Further, it aims at creating a pool of organized, trained and motivated youth with leadership qualities in all walks of life
+  </div>
   </div>
 </div>	
 
